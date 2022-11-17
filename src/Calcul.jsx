@@ -9,7 +9,7 @@ const Calcul=()=>{
         <h2>
             add two number
         </h2>
-        <button onClick={()=>{
+        <button type="button" class='btn btn-danger' onClick={()=>{
             setcount((count)=>count+1)
             if(count>12){
                 alert("its full")

@@ -4,12 +4,15 @@ import './App.css'
 import Hello from './Hello'
 import Calcul from './Calcul'
 import ListPlayer from './ListPlayer'
+import Header from './Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <>
+    <Header />
+    <div className="Container">
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -19,8 +22,8 @@ function App() {
         </a>
       </div>
       <Hello name="aliou" />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+      <div class="card">
+        <button type='button' class='btn btn-success' onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <Calcul />
@@ -32,6 +35,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
+    </>
   )
 }
 
